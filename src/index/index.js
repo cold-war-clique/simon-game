@@ -1,4 +1,5 @@
 import api from '../services/api.js';
+import makeCode from '../services/make-code.js';
 
 const userSignUp = document.getElementById('user-sign-up');
 
@@ -7,10 +8,13 @@ userSignUp.addEventListener('submit', (event) => {
 
     const formData = new FormData(userSignUp);
     const user = api.makeUser(formData);
+    const code = makeCode();
     
     api.makeUser(formData);
 
     api.saveUser(user);
+    api.saveCode(code);
+    console.log(code);
 
-    window.location = 'game.html';
+    window.location = 'game.`html';
 });
