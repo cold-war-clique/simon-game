@@ -4,12 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Simon Game</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/game.css">
 </head>
 <body>
-    
+    <header>
+        <h1>game title</h1>
+        <div class="profile">
+            <section>
+                <span id="user-name">name</span>
+            </section>
+            <section>
+                <span id="level-label">level: </span>
+                <span id="level">10</span>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <section id="button-row-1">
+                <button id="button-1">1</button>
+                <button id="button-2">2</button>
+                <button id="button-3">3</button>
+            </section>
+            <section id="button-row-4">
+                <button id="button-4">4</button>
+                <button id="button-5">5</button>
+                <button id="button-6">6</button>
+            </section>
+            <section id="button-row-7">
+                <button id="button-7">7</button>
+                <button id="button-8">8</button>
+                <button id="button-9">9</button>
+            </section>
+            <section id="button-row-0">
+                <button id="button-0">0</button>
+            </section>
+            <section id="code-input-row">
+                <input id-="code-input" type="text" value="input-value" placeholder="code" disabled>
+            </section>
+            <section id="submit-row">
+                <button id="submit-button">Submit</button>
+            </section>
+        </form>
+    </main>
     <script type="module" src="./src/game/game.js"></script>
 </body>
 </html>

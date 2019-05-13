@@ -4,12 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Simon Game Results</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/results.css">
 </head>
 <body>
-    
+     <header>
+         <h1>game logo</h1>
+     </header>
+
+     <main>
+            <section>
+                    <span id="user-name">name</span>
+                </section>
+                <section>
+                    <span id="level-label">level: </span>
+                    <span id="level">10</span>
+                </section>
+                <table id="high-score-table">
+                    <thead>
+                        <tr>
+                            <td>name:</td>
+                            <td>score:</td>
+                        </tr>
+                    </thead>
+                    <tbody id="users-score">
+                        <tr>
+                            <td>Btrian</td>
+                            <td>23</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+     </main>
     <script type="module" src="./src/results/results.js"></script>
 </body>
 </html>

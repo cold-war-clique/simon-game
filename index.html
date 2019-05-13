@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Simon Game Home</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    
+    <header>
+        <h1 id="game-title">Simon Game!!</h1>
+        <h2>Save the world from nuclear destruction!!!</h2>
+    </header>
+
+    <main>
+        <form id="user-sign-up">
+            <p>
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name">
+            </p>
+
+            <button id="button-id" type="submit">Start Game</button>
+        </form>
+    </main>
+
     <script type="module" src="./src/index/index.js"></script>
 </body>
 </html>
