@@ -12,6 +12,16 @@ const code = api.getCode();
 
 loadUser();
 
+startButton.addEventListener('click', () => {
+    console.log('starting code');
+    // don't allow the user to click the start button,
+    // maybe even hide it as well...
+    startButton.disabled = true;
+    startButton.classList.add('invisible');
+    
+    playCode(code, buttons);
+});
+
 submitButton.addEventListener('click', () => {
     const number = randomNumber();
     code.push(number);
@@ -20,22 +30,15 @@ submitButton.addEventListener('click', () => {
 
 console.log(user);
 
+const userCode = [];
 
-startButton.addEventListener('click', () => {
-    console.log('starting code');
-    // don't allow the user to click the start button,
-    // maybe even hide it as well...
-    startButton.disabled = true;
-    startButton.classList.add('invisible');
+for(const button of buttons) {
+    button.addEventListener('click', function() {
+        const userNumber = parseInt(button.value);
 
-    playCode(code, buttons);
-});
+        userCode.push(userNumber);
 
 
-
-// generate random number
-
-// push random number to user.code
-
-// play user.code array on keypad
-
+        console.log(userCode);
+    });
+}

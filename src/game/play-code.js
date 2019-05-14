@@ -46,7 +46,7 @@ function turnAllOff(code, buttons) {
 }
 
 function donePlaying() {
-    console.log('code has been played, time to do the next thing...');
+    // console.log('code has been played, time to do the next thing...');
 }
 
 export default playCode;
