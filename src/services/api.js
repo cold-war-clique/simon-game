@@ -1,4 +1,3 @@
-import randomNumber from './random-number.js';
 
 const api = {
     storage: localStorage,

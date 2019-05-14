@@ -16,5 +16,5 @@ userSignUp.addEventListener('submit', (event) => {
     api.saveCode(code);
     console.log(code);
 
-    window.location = 'game.`html';
+    window.location = 'game.html';
 });
