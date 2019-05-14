@@ -1,0 +1,6 @@
+button {
+    margin: 14px;
+    width: 200px;
+    height: 40px;
+    background-image: linear-gradient(rgb(241, 243, 255), rgb(189, 215, 252));
+}

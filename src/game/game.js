@@ -5,7 +5,6 @@ import playCode from './play-code.js';
 import compareCodes from './compare-codes.js';
 
 const buttons = document.querySelectorAll('.button');
-//const submitButton = document.getElementById('submit-button');
 const startContainer = document.getElementById('start-container');
 
 const user = api.getUser();
@@ -14,13 +13,10 @@ const userCode = [];
 
 loadUser();
 
-//document.querySelectorAll('.button').disabled = true;
-
 for(let i = 0; i < buttons.length; i++) {
     const element = buttons[i];
     element.disabled = true;
 }
-
 
 if(user.level >= 2){
     playCode(code, buttons);
@@ -52,8 +48,10 @@ for(const button of buttons) {
         
         let intCheck = compareCodes(code, userCode);
         if(intCheck === false){
-            console.log('lose');
-            window.location = './results.html';
+            console.log('lose'); 
+            setTimeout(function() {
+                window.location = './results.html';
+            }, 5000);
         } else if(code.length === userCode.length && intCheck){
             console.log('win');
             const newLevel = user.level + 1;

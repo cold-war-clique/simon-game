@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 5em;
+}
+thead {
+    font-weight: bolder;
+    color: white;
+    background: darkolivegreen;
+}
+tbody tr:nth-child(even) {
+    background: lightgreen;
+}
+td {
+    padding: 8px 5px;
+}
