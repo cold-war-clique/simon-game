@@ -6,7 +6,7 @@ import compareCodes from './compare-codes.js';
 
 const buttons = document.querySelectorAll('.button');
 //const submitButton = document.getElementById('submit-button');
-const startButton = document.getElementById('start');
+const startContainer = document.getElementById('start-container');
 
 const user = api.getUser();
 const code = api.getCode();
@@ -14,12 +14,33 @@ const userCode = [];
 
 loadUser();
 
-startButton.addEventListener('click', () => {
-    startButton.disabled = true;
-    startButton.classList.add('invisible');
-    
+//document.querySelectorAll('.button').disabled = true;
+
+for(let i = 0; i < buttons.length; i++) {
+    const element = buttons[i];
+    element.disabled = true;
+}
+
+
+if(user.level >= 2){
     playCode(code, buttons);
-});
+} else {
+    const button = document.createElement('button');
+    button.id = 'start';
+    button.textContent = 'Start Game';
+    startContainer.appendChild(button);
+    const startButton = document.getElementById('start');
+
+    startButton.addEventListener('click', () => {
+        startButton.disabled = true;
+        startButton.classList.add('invisible');
+        
+        playCode(code, buttons);
+    
+        startButton.classList.add('hide');
+
+    });
+}
 
 console.log(code);
 
@@ -45,11 +66,3 @@ for(const button of buttons) {
         }
     });
 }
-
-// submitButton.addEventListener('click', () => {
-    
-// });
-
-// code that happens after everything else runs
-//const number = randomNumber();
-//code.push(number);

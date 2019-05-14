@@ -12,7 +12,7 @@ function playCode(code, buttons) {
             // stop our interval timer
             clearInterval(interval);
             // call the next step
-            donePlaying();
+            donePlaying(buttons);
         }
         else {
             // create a slight "pause" between button plays,
@@ -45,7 +45,12 @@ function turnAllOff(code, buttons) {
     }
 }
 
-function donePlaying() {
+function donePlaying(buttons) {
+    for(let i = 0; i < buttons.length; i++){
+        const element = buttons[i];
+        //element.classList.add('disabled');
+        element.disabled = false;
+    }
     // console.log('code has been played, time to do the next thing...');
 }
 

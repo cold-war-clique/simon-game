@@ -1,3 +1,13 @@
 .on{
     background: yellow;
 }
+.disabled{
+    pointer-events: none;
+}
+.hide{
+    display: none;
+}
+#start{
+    width: 200px;
+    height: 30px;
+}
