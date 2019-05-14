@@ -2,6 +2,7 @@
 const api = {
     storage: localStorage,
 
+    key: 'users',
     makeUser(formData){ 
         const user = {
             name: formData.get('name'),
@@ -18,6 +19,15 @@ const api = {
         if(!json) return null;
         const user = JSON.parse(json);
         return user;
+
+    },
+    getAll() {
+        const json = localStorage.getItem(api.key);
+        let users = JSON.parse(json);
+        if(!users) {
+            users = [];
+        }
+        return users;
     },
     saveCode(code){
         const json = JSON.stringify(code);
