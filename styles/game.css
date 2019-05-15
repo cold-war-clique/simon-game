@@ -8,12 +8,38 @@
     display: none;
 }
 #start{
-    width: 200px;
-    height: 30px;
+    margin: 30px;
+    width: 400px;
+    height: 150px;
 }
-.button {
+.button{
     margin: 8px;
     width: 40px;
     height: 40px;
     border-radius: 25%;
+    background-image: linear-gradient(rgb(115, 145, 106), rgb(19, 44, 18));
+    color: lightgreen;
+    font-size: 1.2em;
+    border-color: darkolivegreen;
+}
+.button:disabled{
+    background-image: linear-gradient(rgb(115, 145, 106), rgb(19, 44, 18));
+}
+#button-container{
+    padding: 30px;
+    background-image: linear-gradient(rgb(23, 47, 19), rgb(58, 47, 17));
+}
+#input-container{
+    margin: 30px;
+}
+input{
+    padding-left: 10px;
+    background: rgb(19, 44, 19);
+    font-size: 1.4em;
+    color: lightgreen;
+    width: 300px;
+    height: 35px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: rgb(68, 146, 68);
 }
