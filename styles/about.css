@@ -1,0 +1,30 @@
+main {
+    margin: auto;
+}
+#about-container {
+    padding: 10vw;
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+#paul {
+    width: 33.3%;
+    float: left;
+}
+#vasiliy {
+    width: 33.3%;
+    float: left;
+}
+#wes {
+    width: 33.4%;
+    float: left;
+}
+h2 {
+    margin: 20px;
+}
+p {
+    margin: 20px;
+}
