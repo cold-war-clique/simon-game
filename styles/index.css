@@ -1,6 +1,59 @@
-button {
-    margin: 14px;
-    width: 200px;
-    height: 40px;
-    background-image: linear-gradient(rgb(241, 243, 255), rgb(189, 215, 252));
+body {
+    background-image: url('https://media1.tenor.com/images/015330fbe285878f3b1c006f2e679c83/tenor.gif?itemid=12737642');
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;
 }
+header, label {
+    color: rgb(224, 14, 14);
+    text-shadow: 2px 3px black;
+}
+button {
+    background-image: url(./button.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 70px;
+  width: 150px;
+  background-color: rgb(172, 5, 5);
+}
+h5 {
+    color: white;
+    border-radius: 6%;
+    animation: type 6s steps(60),
+    blink-caret 1s step-end infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid white;
+}  
+@keyframes type {
+    0%{
+        width: 0ch;
+    }
+    100% {
+        width: 60ch;
+    }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+fieldset {
+    background-color: rgb(23, 32, 23);
+    border-radius: 25px;
+    margin: 5px;
+    width: 800px;
+}
+.blink {
+    animation: blinker 3s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  input {
+    background-color: rgb(23, 32, 23);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    height: 20px;
+  }
