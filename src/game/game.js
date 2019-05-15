@@ -6,13 +6,20 @@ import compareCodes from './compare-codes.js';
 
 const buttons = document.querySelectorAll('.button');
 const startContainer = document.getElementById('start-container');
-const passwordInput = document.getElementById('code-input');
+let passwordInput = document.getElementById('code-input');
 
 const user = api.getUser();
 const code = api.getCode();
 const userCode = [];
+let userCodeInput = '';
 
 loadUser();
+
+if(user.win === false){
+    window.location = './results.html';
+}
+console.log(user);
+
 
 for(let i = 0; i < buttons.length; i++) {
     const element = buttons[i];
@@ -44,11 +51,23 @@ console.log(code);
 for(const button of buttons) {
     button.addEventListener('click', function() {
         const userNumber = parseInt(button.value);
-        
         userCode.push(userNumber);
+        
+        let numberPressed;
+        if(userNumber > 8){
+            numberPressed = 0;
+        } else {
+            numberPressed = userNumber + 1;
+        }
+        passwordInput.type = 'text';
+        userCodeInput += numberPressed;
+        passwordInput.value = userCodeInput;
         
         let intCheck = compareCodes(code, userCode);
         if(intCheck === false){ 
+            user.win = false;
+            api.saveUser(user);
+            console.log(user);
             setTimeout(function() {
                 window.location = './results.html';
             }, 5); // Delay for gif to play was 5000 miliseconds

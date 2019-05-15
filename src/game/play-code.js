@@ -29,7 +29,6 @@ function playCode(code, buttons, passwordInput) {
                 buttonToPlay.classList.add('on');
                 
                 password += 'x';
-                console.log(password);
                 passwordInput.value = password;
                 // increment the index for next interval
                 i = i + 1;

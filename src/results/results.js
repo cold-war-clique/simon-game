@@ -7,7 +7,14 @@ loadUser();
 
 users.sort((a, b) => b.level - a.level);
 
-for(let i = 0; i < 10; i++) {
+let length;
+if(users.length < 10){
+    length = users.length;
+} else {
+    length = 10;
+}
+
+for(let i = 0; i < length; i++) {
 
     const user = users[i];
     

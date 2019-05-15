@@ -6,9 +6,9 @@ function loadUser() {
 
     const user = api.getUser();
 
-    // if(!user) {
-    //     window.location = './';
-    // }
+    if(!user) {
+        window.location = './';
+    }
 
     name.textContent = user.name;
     level.textContent = user.level;
