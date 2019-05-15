@@ -3,13 +3,11 @@ import api from '../services/api.js';
 
 const tbody = document.getElementById('users-score');
 const users = api.getAll();
-//const user = api.getUser();
 loadUser();
 
-for(let i = 0; i < users.length; i++) {
-    // const userLevel = users[i].level;
-    
-    // console.log(userLevel);
+users.sort((a, b) => b.level - a.level);
+
+for(let i = 0; i < 10; i++) {
 
     const user = users[i];
     

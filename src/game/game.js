@@ -51,7 +51,7 @@ for(const button of buttons) {
             console.log('lose'); 
             setTimeout(function() {
                 window.location = './results.html';
-            }, 5000);
+            }, 5); // Delay for gif to play was 5000 miliseconds
         } else if(code.length === userCode.length && intCheck){
             console.log('win');
             const newLevel = user.level + 1;

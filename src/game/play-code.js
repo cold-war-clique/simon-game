@@ -30,11 +30,11 @@ function playCode(code, buttons) {
     
                 // increment the index for next interval
                 i = i + 1;
-            }, 500); // this controls the pause, 500ms
+            }, 100); // this controls the pause, 500ms
 
         }
         
-    }, 1250); // interval minus pause determines length of button, 750ms in this case
+    }, 250); // interval minus pause determines length of button, 750ms in this case //was 1250 miliseconds
 }
 
 function turnAllOff(code, buttons) {
