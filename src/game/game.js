@@ -67,7 +67,6 @@ for(const button of buttons) {
         if(intCheck === false){ 
             user.win = false;
             api.saveUser(user);
-            console.log(user);
             setTimeout(function() {
                 window.location = './results.html';
             }, 5); // Delay for gif to play was 5000 miliseconds
@@ -77,11 +76,19 @@ for(const button of buttons) {
             
             const number = randomNumber();
             code.push(number);
+            
+            if(user.level > 19){
+                api.saveCode(code);
+                api.saveUser(user);
 
-            api.saveCode(code);
-            api.saveUser(user);
+                window.location = './win.html';
+            } else {
+                api.saveCode(code);
+                api.saveUser(user);
+    
+                location.reload();
+            }
 
-            location.reload();
         }
     });
 }

@@ -16,3 +16,11 @@ tbody tr:nth-child(even) {
 td {
     padding: 8px 5px;
 }
+#cheat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: orange;
+}
