@@ -11,14 +11,34 @@ const api = {
         return user;
     },
     saveUser(user){
-        const json = JSON.stringify(user);
-        api.storage.setItem('user', json);
+        const users = api.getAll();
+        //users.push(user);
+        users[0] = user;
+        const json = JSON.stringify(users);
+        api.storage.setItem(api.key, json);
+    },
+    saveNewUser(user){
+        const users = api.getAll();
+        users.unshift(user);
+        const json = JSON.stringify(users);
+        api.storage.setItem(api.key, json);
     },
     getUser(){
-        const json = api.storage.getItem('user');
-        if(!json) return null;
-        const user = JSON.parse(json);
-        return user;
+        const users = api.getAll();
+
+        // for(let i = 0; i < users.length; i++) {
+        //     const user = users[i];
+        //     if(user.name === name){
+        //         return user[0];
+        //     }
+        // }
+        return users[0];
+
+
+        // const json = api.storage.getItem('user');
+        // if(!json) return null;
+        // const user = JSON.parse(json);
+        // return user;
 
     },
     getAll() {

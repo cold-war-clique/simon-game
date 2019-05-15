@@ -12,7 +12,7 @@ userSignUp.addEventListener('submit', (event) => {
     
     api.makeUser(formData);
 
-    api.saveUser(user);
+    api.saveNewUser(user);
     api.saveCode(code);
     console.log(code);
 
