@@ -1,8 +1,8 @@
 
-function playCode(code, buttons) {
+function playCode(code, buttons, passwordInput) {
     // keep track of what index in the array is being "played"
     let i = 0;
-
+    let password = '';
     const interval = setInterval(() => {
         // turn off all buttons
         turnAllOff(code, buttons);
@@ -12,7 +12,7 @@ function playCode(code, buttons) {
             // stop our interval timer
             clearInterval(interval);
             // call the next step
-            donePlaying(buttons);
+            donePlaying(buttons, passwordInput);
         }
         else {
             // create a slight "pause" between button plays,
@@ -27,14 +27,17 @@ function playCode(code, buttons) {
                 const buttonToPlay = buttons[indexToPlay];
                 // turn the button "on" by adding css class
                 buttonToPlay.classList.add('on');
-    
+                
+                password += 'x';
+                console.log(password);
+                passwordInput.value = password;
                 // increment the index for next interval
                 i = i + 1;
-            }, 100); // this controls the pause, 500ms
+            }, 300); // this controls the pause, 500ms
 
         }
         
-    }, 250); // interval minus pause determines length of button, 750ms in this case //was 1250 miliseconds
+    }, 750); // interval minus pause determines length of button, 750ms in this case //was 1250 miliseconds
 }
 
 function turnAllOff(code, buttons) {
@@ -45,10 +48,10 @@ function turnAllOff(code, buttons) {
     }
 }
 
-function donePlaying(buttons) {
+function donePlaying(buttons, passwordInput) {
     for(let i = 0; i < buttons.length; i++){
+        passwordInput.value = '';
         const element = buttons[i];
-        //element.classList.add('disabled');
         element.disabled = false;
     }
     // console.log('code has been played, time to do the next thing...');
