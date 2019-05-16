@@ -1,13 +1,14 @@
 body {
     background-image: url(./imgonline-com-ua-8bit-Picture-IiXTsos80vdGK.jpg);
     background-size: cover;
+    font-family: 'Press Start 2P', cursive;
 }
-main {
-    background-image: url(./imgonline-com-ua-8bit-Picture-sn3KNweLbwO.jpg);
+header, a {
+    color: rgb(224, 14, 14);
+    text-shadow: 2px 3px black;
+    margin: 15px;
 }
-.on{
-    background: yellow;
-}
+
 .disabled{
     pointer-events: none;
 }
@@ -20,7 +21,34 @@ main {
 }
 .button {
     margin: 8px;
-    width: 40px;
-    height: 40px;
-    border-radius: 25%;
+    width: 60px;
+    height: 60px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(169, 170, 77);
+    color: rgb(43, 44, 36);
+    border-radius: 0px;
+    border: outset;
+    border-width: 7px;
+    border-color: rgb(122, 124, 33);
+}
+.button:hover {
+    background-color: rgb(182, 162, 76);
+    box-shadow: 2px 2px rgb(8, 27, 9);
+}
+.button:active {
+    box-shadow: 0px;
+}
+.on {
+    background: rgb(212, 212, 21);
+}
+#start {
+    width: 250px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(199, 201, 129);
+    color: rgb(43, 44, 36);
+    border-radius: 0px;
+    border: outset;
+    border-width: 7px;
+    border-color: rgb(169, 170, 102);
 }

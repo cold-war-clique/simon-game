@@ -7,16 +7,16 @@
     <title>Simon Game</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/game.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>game title</h1>
+        <h1>NUCLEAR CONTROL PANEL</h1>
         <div class="profile">
             <section>
-                <span id="user-name">name</span>
-            </section>
-            <section>
-                <span id="level-label">level: </span>
+                <span id="user-name-label">NAME:</span>
+                <span id="user-name"></span>
+                <span id="level-label">LEVEL: </span>
                 <span id="level"></span>
             </section>
         </div>
@@ -47,7 +47,7 @@
         <section id="input-container">
             <input type="password" name="code-input" id="code-input">
         </section>
-        <a href="./">New Game</a>
+        <a href="./">Start Over</a>
     </main>
     <script type="module" src="./src/game/game.js"></script>
 </body>
