@@ -9,7 +9,7 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 .body{
-    background-color: rgb(0, 0, 0) !important;
+    background-color: rgba(0, 0, 0, 0.685) !important;
     min-height: 100vh;
 }
 header, label {
@@ -34,5 +34,9 @@ footer {
     height: 40px;
     text-align: center;
     /* background-color: rgb(73, 85, 75); */
+    padding: 20px;
+}
+h1{
+    margin: 0;
     padding: 20px;
 }
