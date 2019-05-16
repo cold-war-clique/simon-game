@@ -1,4 +1,6 @@
 
+const buttonPlay = new Audio('assets/cold-war-needed/button-play.wav');
+
 function playCode(code, buttons, passwordInput) {
     // keep track of what index in the array is being "played"
     let i = 0;
@@ -25,6 +27,9 @@ function playCode(code, buttons, passwordInput) {
 
                 // get the right DOM node based on the button to play
                 const buttonToPlay = buttons[indexToPlay];
+
+                buttonPlay.play();
+                
                 // turn the button "on" by adding css class
                 buttonToPlay.classList.add('on');
                 
@@ -32,11 +37,11 @@ function playCode(code, buttons, passwordInput) {
                 passwordInput.value = password;
                 // increment the index for next interval
                 i = i + 1;
-            }, 300); // this controls the pause, 500ms
+            }, 500); // this controls the pause, 500ms
 
         }
         
-    }, 750); // interval minus pause determines length of button, 750ms in this case //was 1250 miliseconds
+    }, 1250); // interval minus pause determines length of button, 750ms in this case //was 1250 miliseconds
 }
 
 function turnAllOff(code, buttons) {

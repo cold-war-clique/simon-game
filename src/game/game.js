@@ -5,16 +5,22 @@ import playCode from './play-code.js';
 import compareCodes from './compare-codes.js';
 
 const buttons = document.querySelectorAll('.button');
-const startContainer = document.getElementById('start-container');
+//const startContainer = document.getElementById('start-container');
 let passwordInput = document.getElementById('code-input');
-//const myModal = document.getElementById('centralModalSm');
 const myModal = document.getElementById('my-modal');
+const startButton = document.getElementById('start');
 
+const clickSound = new Audio('assets/cold-war-needed/name-letter-sound.mp3');
+const loseMusic = new Audio('assets/cold-war-needed/theme-game4.mp3');
+const startButtonSound = new Audio('assets/cold-war-needed/start-button.wav');
+const loadGameSound = new Audio('assets/cold-war-needed/theme-game-start.mp3');
+const levelUpSound = new Audio('assets/cold-war-needed/level-up.mp3');
 
 const user = api.getUser();
 const code = api.getCode();
 const userCode = [];
 let userCodeInput = '';
+
 
 loadUser();
 
@@ -31,21 +37,21 @@ for(let i = 0; i < buttons.length; i++) {
 
 if(user.level >= 2){
     playCode(code, buttons, passwordInput);
+    levelUpSound.play();
 } else {
-    const button = document.createElement('button');
-    button.id = 'start';
-    button.textContent = 'Start Game';
-    startContainer.appendChild(button);
+    startButton.classList.remove('start-hide');
 
-    const startButton = document.getElementById('start');
+    loadGameSound.play();
 
     startButton.addEventListener('click', () => {
-        startButton.disabled = true;
-        startButton.classList.add('invisible');
-        
+        startButton.classList.add('start-hide');
+
+        loadGameSound.muted = true;
+
         playCode(code, buttons, passwordInput);
     
-        startButton.classList.add('hide');
+        startButtonSound.play();
+
     });
 }
 
@@ -53,6 +59,8 @@ console.log(code);
 
 for(const button of buttons) {
     button.addEventListener('click', function() {
+        clickSound.play();
+
         const userNumber = parseInt(button.value);
         userCode.push(userNumber);
         
@@ -68,19 +76,17 @@ for(const button of buttons) {
         
         let intCheck = compareCodes(code, userCode);
         if(intCheck === false){ 
-            
+            loseMusic.play();
+
             myModal.style.display = 'block';
-            // modal poppup
-            //$('#centralModalSm').modal();
-            //$(#myModal).modal();
-            //myModal();
 
             user.win = false;
             api.saveUser(user);
             api.saveCode(code);
+
             setTimeout(function() {
                 window.location = './results.html';
-            }, 5000); // Delay for gif to play was 5000 miliseconds
+            }, 3000); // Delay for gif to play was 5000 miliseconds
         } else if(code.length === userCode.length && intCheck){
             const newLevel = user.level + 1;
             user.level = newLevel;
@@ -88,7 +94,7 @@ for(const button of buttons) {
             const number = randomNumber();
             code.push(number);
             
-            if(user.level > 19){
+            if(user.level === 20){
                 api.saveCode(code);
                 api.saveUser(user);
 
@@ -99,7 +105,6 @@ for(const button of buttons) {
     
                 location.reload();
             }
-
         }
     });
 }

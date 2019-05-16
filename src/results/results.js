@@ -5,6 +5,9 @@ const cheatButton = document.getElementById('cheat');
 const tbody = document.getElementById('users-score');
 const users = api.getAll();
 const user = api.getUser();
+const endMusic = new Audio('assets/cold-war-needed/theme-final.mp3');
+
+endMusic.play();
 
 loadUser();
 

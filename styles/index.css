@@ -14,7 +14,7 @@ button {
 }
 h5 {
     color: white;
-    animation: type 9s steps(60),
+    animation: type 7s steps(60),
     blink-caret 1s step-end infinite;
     overflow: hidden;
     white-space: nowrap;
