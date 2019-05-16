@@ -6,7 +6,7 @@ const api = {
     makeUser(formData){ 
         const user = {
             name: formData.get('name'),
-            level: 18,
+            level: 1,
             win: true
         };
         return user;

@@ -1,8 +1,11 @@
 import loadUser from '../services/load-user.js';
 import api from '../services/api.js';
 
+const cheatButton = document.getElementById('cheat');
 const tbody = document.getElementById('users-score');
 const users = api.getAll();
+const user = api.getUser();
+
 loadUser();
 
 users.sort((a, b) => b.level - a.level);
@@ -30,3 +33,11 @@ for(let i = 0; i < length; i++) {
 
     tbody.appendChild(tr);
 }
+
+cheatButton.addEventListener(('click'), () => {
+    user.level = 18;
+    user.win = true;
+    api.saveUser(user);
+
+    window.location = './game.html';
+});

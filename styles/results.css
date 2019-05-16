@@ -11,7 +11,7 @@ thead {
     background: darkolivegreen;
 }
 tbody tr:nth-child(even) {
-    background: lightgreen;
+    background: rgb(45, 75, 45);
 }
 td {
     padding: 8px 5px;

@@ -67,6 +67,7 @@ for(const button of buttons) {
         if(intCheck === false){ 
             user.win = false;
             api.saveUser(user);
+            api.saveCode(code);
             setTimeout(function() {
                 window.location = './results.html';
             }, 5); // Delay for gif to play was 5000 miliseconds
