@@ -1,6 +1,7 @@
 body {
     background-image: url('../assets/control-center.jpg');
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.568) !important;
 }
 .disabled{
     pointer-events: none;
@@ -35,10 +36,11 @@ body {
 .button:disabled {
     background-color: rgb(93, 94, 42);
     border-color: rgb(72, 73, 19);
-
 }
 .on {
-    background: rgb(212, 212, 21);
+    background-color: rgb(169, 170, 77) !important;
+    background: rgb(169, 170, 77) !important;
+    border-color: rgb(122, 124, 33) !important;
 }
 #start {
     width: 250px;
