@@ -9,7 +9,7 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 .body{
-    background-color: rgba(0, 0, 0, 0.685) !important;
+    background-color: rgba(0, 0, 0, 0.671) !important;
     min-height: 100vh;
 }
 header, label {
@@ -18,7 +18,7 @@ header, label {
     margin: 0px;
     padding-bottom: 16px;
     color: rgb(224, 14, 14);
-    text-shadow: 2px 3px black;
+    text-shadow: 3px 5px black;
 }
 a {
     font-size: 2em;
