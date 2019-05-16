@@ -7,6 +7,9 @@ import compareCodes from './compare-codes.js';
 const buttons = document.querySelectorAll('.button');
 const startContainer = document.getElementById('start-container');
 let passwordInput = document.getElementById('code-input');
+//const myModal = document.getElementById('centralModalSm');
+const myModal = document.getElementById('my-modal');
+
 
 const user = api.getUser();
 const code = api.getCode();
@@ -65,12 +68,19 @@ for(const button of buttons) {
         
         let intCheck = compareCodes(code, userCode);
         if(intCheck === false){ 
+            
+            myModal.style.display = 'block';
+            // modal poppup
+            //$('#centralModalSm').modal();
+            //$(#myModal).modal();
+            //myModal();
+
             user.win = false;
             api.saveUser(user);
             api.saveCode(code);
             setTimeout(function() {
                 window.location = './results.html';
-            }, 5); // Delay for gif to play was 5000 miliseconds
+            }, 5000); // Delay for gif to play was 5000 miliseconds
         } else if(code.length === userCode.length && intCheck){
             const newLevel = user.level + 1;
             user.level = newLevel;

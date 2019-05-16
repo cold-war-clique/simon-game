@@ -43,3 +43,15 @@ input{
     border-style: inset;
     border-color: rgb(68, 146, 68);
 }
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0,0,0,0.4);
+}
