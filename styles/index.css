@@ -1,6 +1,55 @@
-button {
-    margin: 14px;
-    width: 200px;
-    height: 40px;
-    background-image: linear-gradient(rgb(241, 243, 255), rgb(189, 215, 252));
+body {
+    background-image: url('../assets/ruined-city.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.555);
 }
+button {
+    background-image: url('../assets/button.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 70px;
+    width: 150px;
+    background-color: rgb(172, 5, 5);
+}
+h5 {
+    color: white;
+    animation: type 9s steps(60),
+    blink-caret 1s step-end infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid white;
+}  
+@keyframes type {
+    0%{
+        width: 0ch;
+    }
+    100% {
+        width: 60ch;
+    }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+fieldset {
+    background-color: rgb(23, 32, 23);
+    border-radius: 25px;
+    margin: 5px;
+    width: 800px;
+}
+.blink {
+    animation: blinker 3s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  input {
+    background-color: rgb(23, 32, 23);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    height: 20px;
+  }

@@ -1,18 +1,18 @@
 body {
-    max-width: 600px;
+    max-width: 840px;
     margin: auto;
     text-align: center;
-    background: rgb(2, 12, 3);
-    color: rgb(255, 255, 255);
+    font-family: 'Press Start 2P', cursive;
 }
 header {
     text-align: center;
     margin: 0px;
     padding: 1px;
-    background-color: darkolivegreen;
-    color: white;
+    background-color: rgb(63, 78, 38);
+    color: rgb(224, 14, 14);
+    text-shadow: 2px 3px black;
 }
-a{
+a {
     font-size: 2em;
     margin: 30px;
 }

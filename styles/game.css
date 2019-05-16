@@ -1,3 +1,12 @@
+body {
+    background-image: url('../assets/control-center.jpg');
+    background-size: cover;
+}
+header, a {
+    color: rgb(224, 14, 14);
+    text-shadow: 2px 3px black;
+    margin: 15px;
+}
 .disabled{
     pointer-events: none;
 }
@@ -9,49 +18,36 @@
     width: 400px;
     height: 150px;
 }
-#button-container{
-    padding: 30px;
-    background-image: linear-gradient(rgb(23, 47, 19), rgb(58, 47, 17));
-}
 .button{
     margin: 8px;
-    width: 40px;
-    height: 40px;
-    border-radius: 25%;
-    background-image: linear-gradient(rgb(115, 145, 106), rgb(19, 44, 18));
-    color: lightgreen;
-    font-size: 1.2em;
-    border-color: darkolivegreen;
+    width: 60px;
+    height: 60px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(169, 170, 77);
+    color: rgb(43, 44, 36);
+    border-radius: 0px;
+    border: outset;
+    border-width: 7px;
+    border-color: rgb(122, 124, 33);
 }
-.on{
-    background-image: linear-gradient(rgb(34, 187, 34), rgb(32, 107, 36));
+.button:hover {
+    background-color: rgb(182, 162, 76);
+    box-shadow: 2px 2px rgb(8, 27, 9);
 }
-.button:active{
-    background-image: linear-gradient(rgb(34, 187, 34), rgb(32, 107, 36));
+.button:active {
+    box-shadow: 0px;
 }
-#input-container{
-    margin: 30px;
+.on {
+    background: rgb(212, 212, 21);
 }
-input{
-    padding-left: 10px;
-    background: rgb(19, 44, 19);
-    font-size: 1.4em;
-    color: lightgreen;
-    width: 300px;
-    height: 30px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: rgb(68, 146, 68);
-}
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 90%;
-    height: 90%;
-    overflow: auto;
-    background-color: black;
-    background-color: rgba(0,0,0,0.4);
+#start {
+    width: 250px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(199, 201, 129);
+    color: rgb(43, 44, 36);
+    border-radius: 0px;
+    border: outset;
+    border-width: 7px;
+    border-color: rgb(169, 170, 102);
 }
