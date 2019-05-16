@@ -2,11 +2,6 @@ body {
     background-image: url('../assets/control-center.jpg');
     background-size: cover;
 }
-header, a {
-    color: rgb(224, 14, 14);
-    text-shadow: 2px 3px black;
-    margin: 15px;
-}
 .disabled{
     pointer-events: none;
 }
@@ -37,6 +32,11 @@ header, a {
 .button:active {
     box-shadow: 0px;
 }
+.button:disabled {
+    background-color: rgb(93, 94, 42);
+    border-color: rgb(72, 73, 19);
+
+}
 .on {
     background: rgb(212, 212, 21);
 }
@@ -57,8 +57,8 @@ header, a {
     z-index: 1;
     left: 0;
     top: 0;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     overflow: auto;
     background-color: black;
     background-color: rgba(0,0,0,0.4);

@@ -1,5 +1,5 @@
 body {
-    background-image: url('../assets/ruined-city.png');
+    background-image: url('../assets/city.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.555);
@@ -40,16 +40,19 @@ fieldset {
 }
 .blink {
     animation: blinker 3s linear infinite;
-  }
+}
   
-  @keyframes blinker {
+@keyframes blinker {
     50% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  input {
+}
+input {
     background-color: rgb(23, 32, 23);
     color: white;
     font-family: 'Press Start 2P', cursive;
-    height: 20px;
-  }
+    font-size: 1.4em;
+    padding-left: 10px;
+    height: 40px;
+    width: 350px;
+}
