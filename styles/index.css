@@ -1,11 +1,8 @@
 body {
     background-image: url('https://media1.tenor.com/images/015330fbe285878f3b1c006f2e679c83/tenor.gif?itemid=12737642');
     background-size: cover;
-    font-family: 'Press Start 2P', cursive;
-}
-header, label {
-    color: rgb(224, 14, 14);
-    text-shadow: 2px 3px black;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.555);
 }
 button {
     background-image: url(./button.png);
@@ -17,8 +14,7 @@ button {
 }
 h5 {
     color: white;
-    border-radius: 6%;
-    animation: type 6s steps(60),
+    animation: type 9s steps(60),
     blink-caret 1s step-end infinite;
     overflow: hidden;
     white-space: nowrap;
