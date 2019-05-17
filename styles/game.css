@@ -53,6 +53,34 @@ body {
 .start-hide {
     opacity: 0;
 }
+#modal-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    font-size: 2em;
+}
+.start-modal{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 50vw;
+    height: 20vw;
+    overflow: auto;
+    background-color: black;
+    background-color: rgb(0, 0, 0);
+    transform: translate(-50%, -50%);
+    color: white;
+    border: outset;
+    border-width: 7px;
+    text-align: center;
+    vertical-align: middle;
+}
 .modal{
     display: none;
     position: fixed;
@@ -79,7 +107,7 @@ input {
     font-size: 20px;
     font-family: 'Press Start 2P', cursive;
     margin: 36px;
-    margin-top: 14px;
+    margin-top: 6px;
     padding-left: 10px;
 }
 .button-blink {
@@ -87,6 +115,7 @@ input {
 }
 @keyframes blinker {
     50% {
-        opacity: 0.5;
+        background-color: red;
+        opacity: 1;
     }
 }
