@@ -1,0 +1,20 @@
+body {
+    background-image: url(../assets/win3.gif);
+    background-size: cover;
+    color: rgb(255, 254, 254);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.76);
+}
+button {
+    width: 250px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(71, 44, 75);
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    border: outset;
+    border-width: 7px;
+    border-color: rgb(169, 170, 102);
+}
+button:hover {
+    background-color: rgb(39, 25, 41);
+}

@@ -2,7 +2,6 @@ body {
     background-image: url('../assets/city.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.555);
 }
 button {
     background-image: url('../assets/button.png');
@@ -36,6 +35,7 @@ fieldset {
     background-color: rgb(23, 32, 23);
     border-radius: 25px;
     margin: 5px;
+    min-width: 300px;
     width: 800px;
 }
 .blink {
@@ -54,5 +54,5 @@ input {
     font-size: 1.4em;
     padding-left: 10px;
     height: 40px;
-    width: 40vw; 
+    width: 300px; 
 }

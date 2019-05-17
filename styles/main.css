@@ -9,12 +9,12 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 .body{
-    background-color: rgba(0, 0, 0, 0.842) !important;
+    background-color: rgba(0, 0, 0, 0.295) !important;
     min-height: 100vh;
-    /* margin-top: 10px;
-    margin-bottom: 10px; */
-    /* border-style: solid;
-    border-width: 5px; */
+     margin-top: 10px;
+    margin-bottom: 10px; 
+     border-style: solid;
+    border-width: 5px; 
     border-color: white;
     box-sizing: border-box;
     border: 5px solid #CCC;
@@ -34,7 +34,7 @@ a {
     text-shadow: 2px 3px black;
 }
 footer {
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
