@@ -3,7 +3,7 @@ import makeCode from '../services/make-code.js';
 
 const userSignUp = document.getElementById('user-sign-up');
 const indexStartSound = new Audio('assets/cold-war-needed/index-page-start.wav');
-const keyPressSound = new Audio('assets/cold-war-needed/single-typing.wav');
+const keyPressSound = new Audio('assets/cold-war-needed/single-typing.mp3');
 
 window.addEventListener('load', () => {
     window.setTimeout(() => {
