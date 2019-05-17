@@ -16,6 +16,10 @@ body {
     border: 5px solid #CCC;
 }
 
+#user-name, #level{
+    color: rgb(216, 216, 216);
+}
+
 .disabled {
     pointer-events: none;
 }

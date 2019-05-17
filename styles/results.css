@@ -2,6 +2,10 @@ body {
     background-image: url('../assets/ruined-city.png');
 }
 
+#user-name, #level{
+    color: rgb(216, 216, 216);
+}
+
 table {
     width: 100%;
     max-width: 500px;
