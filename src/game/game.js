@@ -80,7 +80,7 @@ for(const button of buttons) {
             api.saveCode(code);
             setTimeout(function() {
                 window.location = './results.html';
-            }, 5000); // Delay for gif to play was 5000 miliseconds
+            }, 30000); // Delay for gif to play was 5000 miliseconds
         } else if(code.length === userCode.length && intCheck){
             const newLevel = user.level + 1;
             user.level = newLevel;
