@@ -1,8 +1,8 @@
 body {
     background-image: url('../assets/city.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
 }
+
 button {
     background-image: url('../assets/button.png');
     background-repeat: no-repeat;
@@ -11,6 +11,7 @@ button {
     width: 150px;
     background-color: rgb(172, 5, 5);
 }
+
 h5 {
     color: white;
     animation: type 7s steps(60),
@@ -19,6 +20,7 @@ h5 {
     white-space: nowrap;
     border-right: 4px solid white;
 }  
+
 @keyframes type {
     0%{
         width: 0ch;
@@ -27,10 +29,12 @@ h5 {
         width: 60ch;
     }
 }
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: white; }
 }
+
 fieldset {
     background-color: rgb(23, 32, 23);
     border-radius: 25px;
@@ -38,15 +42,7 @@ fieldset {
     min-width: 300px;
     width: 800px;
 }
-.blink {
-    animation: blinker 3s linear infinite;
-}
-  
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
+
 input {
     background-color: rgb(23, 32, 23);
     color: white;
@@ -55,4 +51,14 @@ input {
     padding-left: 10px;
     height: 40px;
     width: 300px; 
+}
+
+.blink {
+    animation: blinker 3s linear infinite;
+}
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }

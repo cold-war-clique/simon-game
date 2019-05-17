@@ -1,6 +1,7 @@
 body {
     background-image: url('../assets/ruined-city.png');
 }
+
 table {
     width: 100%;
     max-width: 500px;
@@ -10,27 +11,34 @@ table {
     color: white;
     margin-bottom: 10PX;
 }
+
 tbody {
     background-color: black;
     border: inset;
     border-width: 10px;    
 }
+
 thead {
     font-weight: bolder;
 }
+
 tr {
     border-style: dotted;
 }
+
 td {
     padding: 8px 5px;
 }
+
 span {
     color: rgb(224, 14, 14);
     text-shadow: 2px 3px black;
 }
+
 #noBorder {
     border: none;
 }
+
 #cheat {
     position: absolute;
     bottom: 0;

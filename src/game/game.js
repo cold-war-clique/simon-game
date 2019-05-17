@@ -5,11 +5,9 @@ import playCode from './play-code.js';
 import compareCodes from './compare-codes.js';
 
 const buttons = document.querySelectorAll('.button');
-//const startContainer = document.getElementById('start-container');
 let passwordInput = document.getElementById('code-input');
-const myModal = document.getElementById('my-modal');
+const myModal = document.getElementById('my-modal-kim');
 const startModal = document.getElementById('start-modal');
-//const startButton = document.getElementById('start');
 
 const clickSound = new Audio('assets/cold-war-needed/name-letter-sound.mp3');
 const loseMusic = new Audio('assets/cold-war-needed/theme-game4.mp3');
@@ -22,14 +20,11 @@ const code = api.getCode();
 const userCode = [];
 let userCodeInput = '';
 
-
 loadUser();
 
 if(user.win === false){
     window.location = './results.html';
 }
-console.log(user);
-
 
 for(let i = 0; i < buttons.length; i++) {
     const element = buttons[i];
@@ -53,25 +48,7 @@ if(user.level >= 2){
 
         startButtonSound.play();
     });
-
-
-    // startButton.classList.remove('start-hide');
-
-    // loadGameSound.play();
-
-    // startButton.addEventListener('click', () => {
-    //     startButton.classList.add('start-hide');
-
-    //     loadGameSound.muted = true;
-
-    //     playCode(code, buttons, passwordInput);
-    
-    //     startButtonSound.play();
-
-    // });
 }
-
-console.log(code);
 
 for(const button of buttons) {
     button.addEventListener('click', function() {
@@ -102,7 +79,7 @@ for(const button of buttons) {
 
             setTimeout(function() {
                 window.location = './results.html';
-            }, 7000); // Delay for gif to play was 5000 miliseconds
+            }, 7000);
         } else if(code.length === userCode.length && intCheck){
             const newLevel = user.level + 1;
             user.level = newLevel;

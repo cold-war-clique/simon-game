@@ -1,6 +1,3 @@
-html {
-    height: 100vh;
-}
 body {
     margin: 0px;
     max-width: 840px;
@@ -8,17 +5,7 @@ body {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
 }
-.body{
-    background-color: rgba(0, 0, 0, 0.295) !important;
-    min-height: 100vh;
-     margin-top: 10px;
-    margin-bottom: 10px; 
-     border-style: solid;
-    border-width: 5px; 
-    border-color: white;
-    box-sizing: border-box;
-    border: 5px solid #CCC;
-}
+
 header, label {
     width: 100%;
     text-align: center;
@@ -27,12 +14,19 @@ header, label {
     color: rgb(224, 14, 14);
     text-shadow: 3px 5px black;
 }
+
+h1 {
+    margin: 0;
+    padding: 20px;
+}
+
 a {
     font-size: 2em;
     margin: 30px;
     color: rgb(224, 14, 14);
     text-shadow: 2px 3px black;
 }
+
 footer {
     position: fixed;
     left: 0;
@@ -41,9 +35,5 @@ footer {
     height: 40px;
     text-align: center;
     /* background-color: rgb(73, 85, 75); */
-    padding: 20px;
-}
-h1{
-    margin: 0;
     padding: 20px;
 }

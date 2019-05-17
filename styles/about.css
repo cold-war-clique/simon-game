@@ -1,11 +1,14 @@
 body {
     background-image: url(../assets/city.jpg);
     color: white;
-    text-shadow: 7px 7px rgba(250, 1, 1, 0.315);
+    text-shadow: 4px 4px rgba(250, 1, 1, 0.514);
 }
+
 main {
+    line-height: 1.6;
     margin: auto;
 }
+
 #about-container {
     padding: 10vw;
     width: 80vw;
@@ -15,21 +18,26 @@ main {
     margin-left: -50vw;
     margin-right: -50vw; 
 }
+
 #paul {
     width: 33.3%;
     float: left;
 }
+
 #vasiliy {
     width: 33.3%;
     float: left;
 }
+
 #wes {
     width: 33.4%;
     float: left;
- } 
+} 
+
 h2 {
     margin: 20px;
 }
+
 p {
     margin: 20px;
 }

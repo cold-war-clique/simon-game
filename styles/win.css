@@ -4,6 +4,7 @@ body {
     color: rgb(255, 254, 254);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.76);
 }
+
 button {
     width: 250px;
     height: 50px;
@@ -15,6 +16,7 @@ button {
     border-width: 7px;
     border-color: rgb(169, 170, 102);
 }
+
 button:hover {
     background-color: rgb(39, 25, 41);
 }
