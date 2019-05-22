@@ -41,8 +41,8 @@ function turnAllOff(code, buttons) {
 }
 
 function donePlaying(buttons, passwordInput) {
+    passwordInput.value = '';
     for(let i = 0; i < buttons.length; i++){
-        passwordInput.value = '';
         const element = buttons[i];
         element.disabled = false;
     }
