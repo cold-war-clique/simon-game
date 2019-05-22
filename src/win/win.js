@@ -7,7 +7,6 @@ const resultsButton = document.getElementById('results');
 loadUser();
 const user = api.getUser();
 
-
 continueButton.addEventListener('click', () => {
     window.location = './game.html';
 });
