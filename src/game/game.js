@@ -26,6 +26,8 @@ if(user.win === false){
     window.location = './results.html';
 }
 
+// same code is in play-code.js,
+// create a shared function
 for(let i = 0; i < buttons.length; i++) {
     const element = buttons[i];
     element.disabled = true;
@@ -50,6 +52,8 @@ if(user.level >= 2){
     });
 }
 
+// be consistent. above you are using traditional for loop,
+// here you are using newer syntax
 for(const button of buttons) {
     button.addEventListener('click', function() {
         clickSound.play();
@@ -68,7 +72,7 @@ for(const button of buttons) {
         passwordInput.value = userCodeInput;
         
         let intCheck = compareCodes(code, userCode);
-        if(intCheck === false){ 
+        if(!intCheck){ 
             loseMusic.play();
 
             myModal.style.display = 'block';
@@ -80,6 +84,7 @@ for(const button of buttons) {
             setTimeout(function() {
                 window.location = './results.html';
             }, 7000);
+        // do you really need the check? or just "else"?
         } else if(code.length === userCode.length && intCheck){
             const newLevel = user.level + 1;
             user.level = newLevel;

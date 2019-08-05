@@ -11,9 +11,10 @@ window.addEventListener('load', () => {
     }, 750);
 });
 
-document.addEventListener('keypress', function(){
+document.addEventListener('keypress', () => {
     keyPressSound.play();
 });
+
 userSignUp.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -28,7 +29,7 @@ userSignUp.addEventListener('submit', (event) => {
 
     indexStartSound.play();
 
-    setTimeout(function() {
+    setTimeout(() => {
         window.location = 'game.html';
     }, 750);
 
